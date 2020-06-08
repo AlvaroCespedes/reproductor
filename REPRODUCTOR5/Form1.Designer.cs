@@ -36,40 +36,35 @@
             this.listGuardadas = new System.Windows.Forms.ListBox();
             this.Boton2 = new System.Windows.Forms.Button();
             this.btnAgregarInfo = new System.Windows.Forms.Button();
-            this.panelCancion = new System.Windows.Forms.Panel();
-            this.btnVolver = new System.Windows.Forms.Button();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.txtPublicationYear = new System.Windows.Forms.TextBox();
-            this.txtGender = new System.Windows.Forms.TextBox();
-            this.txtKeyword = new System.Windows.Forms.TextBox();
-            this.txtAlbum = new System.Windows.Forms.TextBox();
-            this.txtComposer = new System.Windows.Forms.TextBox();
-            this.txtSinger = new System.Windows.Forms.TextBox();
-            this.txtStudy = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.mTrackStatus = new XComponent.SliderBar.MACTrackBar();
             this.mTrackVolumen = new XComponent.SliderBar.MACTrackBar();
-            this.lblCancion = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnStop = new System.Windows.Forms.PictureBox();
             this.btnPlay2 = new System.Windows.Forms.PictureBox();
-            this.listBoxAgregar = new System.Windows.Forms.ListBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnContinuar = new System.Windows.Forms.Button();
+            this.panelCancion = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblCancion = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtStudy = new System.Windows.Forms.TextBox();
+            this.txtSinger = new System.Windows.Forms.TextBox();
+            this.txtComposer = new System.Windows.Forms.TextBox();
+            this.txtAlbum = new System.Windows.Forms.TextBox();
+            this.txtKeyword = new System.Windows.Forms.TextBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.txtPublicationYear = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Reproductor)).BeginInit();
-            this.panelCancion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay2)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelCancion.SuspendLayout();
             this.SuspendLayout();
             // 
             // Reproductor
@@ -132,181 +127,6 @@
             this.btnAgregarInfo.UseVisualStyleBackColor = true;
             this.btnAgregarInfo.Click += new System.EventHandler(this.btnAgregarInfo_Click);
             // 
-            // panelCancion
-            // 
-            this.panelCancion.Controls.Add(this.button1);
-            this.panelCancion.Controls.Add(this.label8);
-            this.panelCancion.Controls.Add(this.lblCancion);
-            this.panelCancion.Controls.Add(this.label7);
-            this.panelCancion.Controls.Add(this.label6);
-            this.panelCancion.Controls.Add(this.label5);
-            this.panelCancion.Controls.Add(this.label4);
-            this.panelCancion.Controls.Add(this.label3);
-            this.panelCancion.Controls.Add(this.label2);
-            this.panelCancion.Controls.Add(this.label1);
-            this.panelCancion.Controls.Add(this.txtStudy);
-            this.panelCancion.Controls.Add(this.txtSinger);
-            this.panelCancion.Controls.Add(this.txtComposer);
-            this.panelCancion.Controls.Add(this.txtAlbum);
-            this.panelCancion.Controls.Add(this.txtKeyword);
-            this.panelCancion.Controls.Add(this.txtGender);
-            this.panelCancion.Controls.Add(this.txtPublicationYear);
-            this.panelCancion.Controls.Add(this.txtTitle);
-            this.panelCancion.Controls.Add(this.btnVolver);
-            this.panelCancion.Location = new System.Drawing.Point(0, 3);
-            this.panelCancion.Name = "panelCancion";
-            this.panelCancion.Size = new System.Drawing.Size(800, 450);
-            this.panelCancion.TabIndex = 6;
-            this.panelCancion.Visible = false;
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.Location = new System.Drawing.Point(308, 367);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(133, 63);
-            this.btnVolver.TabIndex = 0;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.Location = new System.Drawing.Point(148, 77);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(169, 22);
-            this.txtTitle.TabIndex = 1;
-            // 
-            // txtPublicationYear
-            // 
-            this.txtPublicationYear.Location = new System.Drawing.Point(588, 107);
-            this.txtPublicationYear.Name = "txtPublicationYear";
-            this.txtPublicationYear.Size = new System.Drawing.Size(169, 22);
-            this.txtPublicationYear.TabIndex = 3;
-            // 
-            // txtGender
-            // 
-            this.txtGender.Location = new System.Drawing.Point(148, 189);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(169, 22);
-            this.txtGender.TabIndex = 4;
-            // 
-            // txtKeyword
-            // 
-            this.txtKeyword.Location = new System.Drawing.Point(588, 77);
-            this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Size = new System.Drawing.Size(169, 22);
-            this.txtKeyword.TabIndex = 5;
-            // 
-            // txtAlbum
-            // 
-            this.txtAlbum.Location = new System.Drawing.Point(148, 161);
-            this.txtAlbum.Name = "txtAlbum";
-            this.txtAlbum.Size = new System.Drawing.Size(169, 22);
-            this.txtAlbum.TabIndex = 6;
-            // 
-            // txtComposer
-            // 
-            this.txtComposer.Location = new System.Drawing.Point(148, 133);
-            this.txtComposer.Name = "txtComposer";
-            this.txtComposer.Size = new System.Drawing.Size(169, 22);
-            this.txtComposer.TabIndex = 7;
-            // 
-            // txtSinger
-            // 
-            this.txtSinger.Location = new System.Drawing.Point(148, 105);
-            this.txtSinger.Name = "txtSinger";
-            this.txtSinger.Size = new System.Drawing.Size(169, 22);
-            this.txtSinger.TabIndex = 8;
-            // 
-            // txtStudy
-            // 
-            this.txtStudy.Location = new System.Drawing.Point(148, 217);
-            this.txtStudy.Name = "txtStudy";
-            this.txtStudy.Size = new System.Drawing.Size(169, 22);
-            this.txtStudy.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Titulo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Cantante";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 17);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Compositor";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 166);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Album";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Genero";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 220);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 17);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "estudio";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(445, 80);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 17);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "PalabraClave";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(445, 112);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 17);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "AñoPublicacion";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(308, 313);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 35);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Agregar Ahora";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // mTrackStatus
             // 
             this.mTrackStatus.BackColor = System.Drawing.Color.Transparent;
@@ -354,15 +174,6 @@
             this.mTrackVolumen.Value = 0;
             this.mTrackVolumen.ValueChanged += new XComponent.SliderBar.ValueChangedHandler(this.mTrackVolumen_ValueChanged);
             // 
-            // lblCancion
-            // 
-            this.lblCancion.AutoSize = true;
-            this.lblCancion.Location = new System.Drawing.Point(555, 322);
-            this.lblCancion.Name = "lblCancion";
-            this.lblCancion.Size = new System.Drawing.Size(18, 17);
-            this.lblCancion.TabIndex = 11;
-            this.lblCancion.Text = "--";
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -383,7 +194,7 @@
             // btnPlay2
             // 
             this.btnPlay2.Image = global::REPRODUCTOR5.Properties.Resources.play;
-            this.btnPlay2.Location = new System.Drawing.Point(187, 56);
+            this.btnPlay2.Location = new System.Drawing.Point(224, 56);
             this.btnPlay2.Name = "btnPlay2";
             this.btnPlay2.Size = new System.Drawing.Size(102, 95);
             this.btnPlay2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -391,52 +202,196 @@
             this.btnPlay2.TabStop = false;
             this.btnPlay2.Click += new System.EventHandler(this.btnPlay2_Click);
             // 
-            // listBoxAgregar
+            // panelCancion
             // 
-            this.listBoxAgregar.FormattingEnabled = true;
-            this.listBoxAgregar.ItemHeight = 16;
-            this.listBoxAgregar.Location = new System.Drawing.Point(348, 79);
-            this.listBoxAgregar.Name = "listBoxAgregar";
-            this.listBoxAgregar.Size = new System.Drawing.Size(167, 260);
-            this.listBoxAgregar.TabIndex = 22;
+            this.panelCancion.Controls.Add(this.button1);
+            this.panelCancion.Controls.Add(this.label8);
+            this.panelCancion.Controls.Add(this.lblCancion);
+            this.panelCancion.Controls.Add(this.label7);
+            this.panelCancion.Controls.Add(this.label6);
+            this.panelCancion.Controls.Add(this.label5);
+            this.panelCancion.Controls.Add(this.label4);
+            this.panelCancion.Controls.Add(this.label3);
+            this.panelCancion.Controls.Add(this.label2);
+            this.panelCancion.Controls.Add(this.label1);
+            this.panelCancion.Controls.Add(this.txtStudy);
+            this.panelCancion.Controls.Add(this.txtSinger);
+            this.panelCancion.Controls.Add(this.txtComposer);
+            this.panelCancion.Controls.Add(this.txtAlbum);
+            this.panelCancion.Controls.Add(this.txtKeyword);
+            this.panelCancion.Controls.Add(this.txtGender);
+            this.panelCancion.Controls.Add(this.txtPublicationYear);
+            this.panelCancion.Controls.Add(this.txtTitle);
+            this.panelCancion.Controls.Add(this.btnVolver);
+            this.panelCancion.Location = new System.Drawing.Point(2, 0);
+            this.panelCancion.Name = "panelCancion";
+            this.panelCancion.Size = new System.Drawing.Size(800, 451);
+            this.panelCancion.TabIndex = 6;
+            this.panelCancion.Visible = false;
             // 
-            // panel1
+            // button1
             // 
-            this.panel1.Controls.Add(this.btnContinuar);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.panelCancion);
-            this.panel1.Controls.Add(this.listBoxAgregar);
-            this.panel1.Location = new System.Drawing.Point(2, -2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 457);
-            this.panel1.TabIndex = 23;
-            this.panel1.Visible = false;
+            this.button1.Location = new System.Drawing.Point(308, 313);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 35);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Agregar Ahora";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label9
+            // label8
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(314, 57);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(249, 17);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Debe elegir una cancion para agregar";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(445, 112);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 17);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "AñoPublicacion";
             // 
-            // btnContinuar
+            // lblCancion
             // 
-            this.btnContinuar.Location = new System.Drawing.Point(336, 356);
-            this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(179, 32);
-            this.btnContinuar.TabIndex = 24;
-            this.btnContinuar.Text = "continuar";
-            this.btnContinuar.UseVisualStyleBackColor = true;
-            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
+            this.lblCancion.AutoSize = true;
+            this.lblCancion.Location = new System.Drawing.Point(555, 322);
+            this.lblCancion.Name = "lblCancion";
+            this.lblCancion.Size = new System.Drawing.Size(18, 17);
+            this.lblCancion.TabIndex = 11;
+            this.lblCancion.Text = "--";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(445, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 17);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "PalabraClave";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 220);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 17);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "estudio";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 194);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Genero";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 166);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 17);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Album";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 17);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Compositor";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Cantante";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 17);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Titulo";
+            // 
+            // txtStudy
+            // 
+            this.txtStudy.Location = new System.Drawing.Point(148, 217);
+            this.txtStudy.Name = "txtStudy";
+            this.txtStudy.Size = new System.Drawing.Size(169, 22);
+            this.txtStudy.TabIndex = 10;
+            // 
+            // txtSinger
+            // 
+            this.txtSinger.Location = new System.Drawing.Point(148, 105);
+            this.txtSinger.Name = "txtSinger";
+            this.txtSinger.Size = new System.Drawing.Size(169, 22);
+            this.txtSinger.TabIndex = 8;
+            // 
+            // txtComposer
+            // 
+            this.txtComposer.Location = new System.Drawing.Point(148, 133);
+            this.txtComposer.Name = "txtComposer";
+            this.txtComposer.Size = new System.Drawing.Size(169, 22);
+            this.txtComposer.TabIndex = 7;
+            // 
+            // txtAlbum
+            // 
+            this.txtAlbum.Location = new System.Drawing.Point(148, 161);
+            this.txtAlbum.Name = "txtAlbum";
+            this.txtAlbum.Size = new System.Drawing.Size(169, 22);
+            this.txtAlbum.TabIndex = 6;
+            // 
+            // txtKeyword
+            // 
+            this.txtKeyword.Location = new System.Drawing.Point(588, 77);
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Size = new System.Drawing.Size(169, 22);
+            this.txtKeyword.TabIndex = 5;
+            // 
+            // txtGender
+            // 
+            this.txtGender.Location = new System.Drawing.Point(148, 189);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(169, 22);
+            this.txtGender.TabIndex = 4;
+            // 
+            // txtPublicationYear
+            // 
+            this.txtPublicationYear.Location = new System.Drawing.Point(588, 107);
+            this.txtPublicationYear.Name = "txtPublicationYear";
+            this.txtPublicationYear.Size = new System.Drawing.Size(169, 22);
+            this.txtPublicationYear.TabIndex = 3;
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.Location = new System.Drawing.Point(148, 77);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(169, 22);
+            this.txtTitle.TabIndex = 1;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(308, 367);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(133, 63);
+            this.btnVolver.TabIndex = 0;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 449);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelCancion);
             this.Controls.Add(this.btnPlay2);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.mTrackVolumen);
@@ -450,12 +405,10 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.Reproductor)).EndInit();
-            this.panelCancion.ResumeLayout(false);
-            this.panelCancion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelCancion.ResumeLayout(false);
+            this.panelCancion.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -468,16 +421,15 @@
         private System.Windows.Forms.ListBox listGuardadas;
         private System.Windows.Forms.Button Boton2;
         private System.Windows.Forms.Button btnAgregarInfo;
+        private XComponent.SliderBar.MACTrackBar mTrackStatus;
+        private XComponent.SliderBar.MACTrackBar mTrackVolumen;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox btnStop;
+        private System.Windows.Forms.PictureBox btnPlay2;
         private System.Windows.Forms.Panel panelCancion;
-        private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.TextBox txtSinger;
-        private System.Windows.Forms.TextBox txtComposer;
-        private System.Windows.Forms.TextBox txtAlbum;
-        private System.Windows.Forms.TextBox txtKeyword;
-        private System.Windows.Forms.TextBox txtGender;
-        private System.Windows.Forms.TextBox txtPublicationYear;
-        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblCancion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -486,17 +438,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtStudy;
-        private System.Windows.Forms.Button button1;
-        private XComponent.SliderBar.MACTrackBar mTrackStatus;
-        private XComponent.SliderBar.MACTrackBar mTrackVolumen;
-        private System.Windows.Forms.Label lblCancion;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox btnStop;
-        private System.Windows.Forms.PictureBox btnPlay2;
-        private System.Windows.Forms.ListBox listBoxAgregar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnContinuar;
+        private System.Windows.Forms.TextBox txtSinger;
+        private System.Windows.Forms.TextBox txtComposer;
+        private System.Windows.Forms.TextBox txtAlbum;
+        private System.Windows.Forms.TextBox txtKeyword;
+        private System.Windows.Forms.TextBox txtGender;
+        private System.Windows.Forms.TextBox txtPublicationYear;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
 

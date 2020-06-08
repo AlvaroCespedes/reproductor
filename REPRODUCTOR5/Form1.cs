@@ -13,36 +13,34 @@ namespace REPRODUCTOR5
 {
     public partial class Form1 : Form
     {
-        string[] ArchivosMP3;
-        string[] rutasArchivosMP3;
+        string ArchivoMP3;
+        string rutaArchivoMP3;
         bool Play = false;
 
-        string[] subida; // atributo d ela cancion
         public Form1()
         {
             InitializeComponent();
         }
-        List<Cancion> canciones = new List<Cancion>();
+        List<SongClass> canciones = new List<SongClass>();
 
         Serializar obj = new Serializar();
-        List<string> archivo = new List<string>();
 
-        private void Adjuntar_Click(object sender, EventArgs e)
+        private void Adjuntar_Click(object sender, EventArgs e) //BOTON SUBIR CANCION
         {
+
             OpenFileDialog CajaBusquedaDeARchivos = new OpenFileDialog();
-            CajaBusquedaDeARchivos.Multiselect = true; // Nos permite seleccionar varios archivos al mismo tiempo
+            // SOLO Puedo elegir un archivo
             if (CajaBusquedaDeARchivos.ShowDialog() == DialogResult.OK) //Filtrando solo los archivos MP3
             {
 
-                ArchivosMP3 = CajaBusquedaDeARchivos.SafeFileNames; // aqui se van almacenar todos los archivos
-                rutasArchivosMP3 = CajaBusquedaDeARchivos.FileNames;
+                ArchivoMP3 = CajaBusquedaDeARchivos.SafeFileName; // aqui se van almacenar todos los archivos
+                rutaArchivoMP3 = CajaBusquedaDeARchivos.FileName;
 
-                List<string> listaAux = new List<string>();
+                List<SongClass> listaAux = new List<SongClass>(); //SongClass
+               
                 try
                 {
-                    listaAux = obj.Deserialize<List<string>>(File.Open("data.bin", FileMode.Open));
-
-
+                    //listaAux = obj.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
                 }
                 catch (System.Runtime.Serialization.SerializationException)
                 {
@@ -50,67 +48,52 @@ namespace REPRODUCTOR5
                 }
                 if (listaAux.Count > 0)
                 {
-                    foreach (var x in listaAux)
+                    foreach (SongClass x in listaAux)
                     {
-                        archivo.Add(x);
+                        canciones.Add(x);
                     }
                 }
 
-                foreach (var x in rutasArchivosMP3)
+                // NECESITO FILTRO QUE SOLO SEA MP3
+                int startIndex = ArchivoMP3.Length - 4;
+                int final = 4;
+                String substring = ArchivoMP3.Substring(startIndex, final);
+                try 
                 {
-                    archivo.Add(x);
+                    //VER QUE SEAN MINUSCULAS Y MAYUSCULAS
+                    if(substring == ".mp3" || substring == ".mp4")
+                    {
+                        listBox1.Items.Add(ArchivoMP3);
+                    }
                 }
-
-                foreach (var ArchivoMP3 in ArchivosMP3)//Para leer cada uno de los archivos MP3 que adjuntamos a la appp
+                catch
                 {
-                    // NECESITO FILTRO QUE SOLO SEA MP3
-                    int startIndex = ArchivoMP3.Length - 4;
-                    int final = 4;
-                    String substring = ArchivoMP3.Substring(startIndex, final);
-                    try 
-                    {
-                        //VER QUE SEAN MINUSCULAS Y MAYUSCULAS
-                        if(substring == ".mp3" || substring == ".mp4")
-                        {
-                            listBox1.Items.Add(ArchivoMP3);
-
-                        }
-                        
-                    }
-                    catch
-                    {
-
-                        MessageBox.Show("Solo formato .mp3 o .mp4");
-                    }
-                    
-                    
+                    MessageBox.Show("Solo formato .mp3 o .mp4");
                 }
                 //Vamos a agarrar el ultio elemtno que adjuntamos en nuestra app y lo vamos a reproducir
-                obj.Serialize(archivo, File.Open("data.bin", FileMode.Create));
-                Reproductor.URL = rutasArchivosMP3[0];
+                Reproductor.URL = rutaArchivoMP3;
                 listBox1.SelectedIndex = 0;
             }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Reproductor.URL = rutasArchivosMP3[listBox1.SelectedIndex];
-            lblCancion.Text = ArchivosMP3[listBox1.SelectedIndex];
+        
         }
 
         private void listGuardadas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Reproductor.URL = archivo[listGuardadas.SelectedIndex];
+            Reproductor.URL = canciones[listGuardadas.SelectedIndex].Url;
         
         }
 
-        private void Boton2_Click(object sender, EventArgs e)
+        private void Boton2_Click(object sender, EventArgs e) // Para ver si se subio la cancion. en el programar real no va
         {
 
             try
             {
-                archivo = obj.Deserialize<List<string>>(File.Open("data.bin", FileMode.Open));
-                foreach (var x in archivo)
+                canciones = obj.Deserialize<List<SongClass>>(File.Open("Canciones.bin", FileMode.Open));
+                foreach (SongClass x in canciones)
                 {
                     listGuardadas.Items.Add(x);
                 }
@@ -121,20 +104,19 @@ namespace REPRODUCTOR5
             {
 
             }
-            foreach (var x in archivo)
+            foreach (SongClass x in canciones)
             {
-                MessageBox.Show(x);
+                MessageBox.Show(x.Title);
             }
         }
 
         private void btnAgregarInfo_Click(object sender, EventArgs e)
         {
-            //panelCancion.Visible = true;
+            panelCancion.Visible = true;
             mTrackStatus.Visible = false;
             mTrackVolumen.Visible = false;
             btnPlay2.Visible = false;
             btnStop.Visible = false;
-            panel1.Visible = true;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -149,7 +131,7 @@ namespace REPRODUCTOR5
 
         private void button1_Click(object sender, EventArgs e)//BOTON PARA AGERGAR INFO
         {
-            btnContinuar.Visible = false;
+
 
 
             string title = "";
@@ -169,14 +151,14 @@ namespace REPRODUCTOR5
             publicationYear = txtPublicationYear.Text;
             study = txtStudy.Text;
             keyWord = txtKeyword.Text;
+            
 
 
-            Cancion ob = new Cancion(gender, publicationYear, title, 123, 123, study, keyWord, composer, singer, album, "asd", ".mp4");
-
-            string nueva = ArchivosMP3[listBoxAgregar.SelectedIndex]; // Cancion seleccionada para agregar informacion
-
-
-
+            SongClass ob = new SongClass(gender, publicationYear, title, 123, 123, study, keyWord, composer, singer, album, "asd", ".mp4",rutaArchivoMP3);
+            canciones.Add(ob);
+            obj.Serialize(canciones, File.Open("Canciones.bin", FileMode.Create));
+            MessageBox.Show("Su ha cancion ha sido guardada.");
+            //Hay que que hacer lo mismo con video.
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -275,7 +257,6 @@ namespace REPRODUCTOR5
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             panelCancion.Visible = true;
-            btnContinuar.Visible = false;
 
         }
     }
